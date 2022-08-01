@@ -1,0 +1,4 @@
+KafkaDemo.code-workspace
+producer/.dockerignore
+producer/local.properties
+producer/.mvn

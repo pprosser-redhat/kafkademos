@@ -1,0 +1,16 @@
+# camel-k: language=yaml
+
+- route:
+    from:
+      uri: kamelet:kafka-not-secured-source
+      steps:
+        - to:
+            uri: kamelet:log-sink
+            parameters:
+              showHeaders: true
+            description: kafka message
+      parameters:
+        bootstrapServers: my-cluster-kafka-bootstrap:9092
+        topic: temperature-values
+        consumerGroup: tempGroup1
+        autoOffsetReset: earliest

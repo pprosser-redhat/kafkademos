@@ -1,0 +1,1 @@
+oc scale it read-aggregation --replicas 2

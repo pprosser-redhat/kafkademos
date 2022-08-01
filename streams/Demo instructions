@@ -1,0 +1,28 @@
+Create Kafka cluster
+
+Topology view, add, Kafka - copy/paste in mycluster.yaml
+
+Create Topics.
+
+Topology view, add Topic - copy/paste first topic from topics.yaml
+
+add the other topics by running 
+
+oc apply -f streams/topics.yaml
+
+Look at the producing app
+
+producer/java/org/acme/kafka/streams/producer/generator 
+
+ValuesGenerator.java
+TopologyProducer.java
+
+Run the app by typing :-
+
+oc apply -f producer/target/kubernetes/openshift.yml
+
+run Camel K integratoin to log aggregations 
+
+scale the integration and watch the partition number
+
+oc scale it read-aggregation --replicas 3

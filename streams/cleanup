@@ -1,0 +1,4 @@
+kamel delete read-aggregation
+oc delete all -l app.kubernetes.io/name=streamsdemo
+oc delete kafka my-cluster
+oc delete kt -l strimzi.io/cluster=my-cluster
